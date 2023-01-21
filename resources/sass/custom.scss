@@ -1,0 +1,19 @@
+// Fonts
+@font-face {
+  font-family: "Ubuntu";
+  src: url('/font/Ubuntu.woff2') format("woff2");
+}
+
+@layer components {
+  .navbar-background {
+    background: theme('colors.o8-purple.300');
+    background-image: linear-gradient(
+      180deg,
+      theme('colors.o8-purple.600') 0%,
+      theme('colors.o8-purple.400') 5%,
+      theme('colors.o8-purple.600') 30%,
+      theme('colors.o8-purple.600') 90%,
+      theme('colors.o8-purple.400') 100%
+    );
+  }
+}
