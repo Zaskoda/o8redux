@@ -3,7 +3,7 @@
 @section('content')
     <div class="bg-gray-500">
         <div  class="px-8 py-8 text-3xl font-bold text-center text-white xl:px-14">
-          <h2 class="bg-center w-full py-[130px] bg-o8-purple-500  rounded-xlxl bg-cover" style="background-image: url('/img/header-distant-planets.png')">Orbiter 8 Alpha Demo 3 Now Online!</h2>
+          <h2 class="bg-center w-full py-[130px] bg-o8-purple-500  rounded-xl bg-cover" style="background-image: url('/img/header-distant-planets.png')">Orbiter 8 Alpha Demo 3 Now Online!</h2>
         </div>
     </div>
 

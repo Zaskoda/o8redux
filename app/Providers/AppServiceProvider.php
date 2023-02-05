@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Services\EVM\EVMNetworkService;
+use App\Services\EVMDB\EVMDBService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('EVMDBService', function ($app) {
+            return new EVMDBService(new EVMNetworkService);
+        });
+
     }
 
     /**

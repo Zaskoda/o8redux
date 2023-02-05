@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\NetworksController;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Passwords\Confirm;
 use App\Http\Livewire\Auth\Passwords\Email;
@@ -22,9 +23,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome')->name('home');
-Route::view('community', 'community')->name('community');
 Route::view('story', 'story')->name('story');
 Route::view('play', 'play')->name('play');
+Route::view('community', 'community')->name('community');
+
+Route::get('networks', [NetworksController::class, 'view'])->name('networks');
+Route::get('networks/update', [NetworksController::class, 'update'])->name('update-networks');
+
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
